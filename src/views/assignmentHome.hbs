@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+    body, html {
+        background-image: url(/pencil.jpg);
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+    }
+    .header {
+        font-size: 120px;
+        color: white;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: black ;
+        opacity: 0.9;
+    }
+    .gray {
+      background-color: rgb(83, 77, 77);
+      font-size: 30px;
+      border: 1px solid black;
+      padding: 5px;
+    }
+    .rounder {
+        border-radius: 20px;
+        color: black;
+        font-family: "Merriweather", sans-serif;
+    }
+    .assignment1 {
+
+      color: black;
+      font-weight: 900;
+      text-align: center;
+      font-family: "Merriweather", sans-serif;
+      opacity: 0.4;
+      border-spacing: 5px;
+      border: 1px solid white;
+      padding: 5px;
+      border-collapse: separate;
+      border-spacing: 25px;
+    }
+    .complete {
+      color: rgb(11, 180, 39);
+      text-align: center;
+      font-weight: 900;
+    }
+    .center {
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .score {
+      font-size: 80px;
+      color: white;
+      font-family: "Merriweather", sans-serif;
+      text-align: center;
+      background-color: black ;
+    }
+    .link {
+      font-size: 30px;
+      color: white;
+      font-family: "Merriweather", sans-serif;
+      text-align: center;
+      background-color: black;
+    }
+    .delete {
+      color: rgb(247, 48, 48);
+    }
+    .edit {
+      color: rgb(199, 202, 9)
+    }
+    .studentName {
+        font-size: 90px;
+        color: white;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: black ;
+        opacity: 0.9;
+    }
+        .intro {
+        font-size: 50px;
+        color: white;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: black ;
+        opacity: 0.9;
+    }
+</style>
+<html>
+<body>
+  <h1 class="header">LinkedIn Demo Assignments App</h1>
+  <h3 class="studentName" > Welcome, <strong>{{studentName}}
+    <br>
+    <p class="intro">Heres a snapshot of your assignments!</p>
+  </strong></h3>
+  <table class="gray rounder center">
+    <tr>
+      <th>ID|</th>
+      <th>Assignment|</th>
+      <th>Score|</th>
+      <th>Total|</th>
+      <th>Completed|</th>
+      <th>Actions</th>
+    </tr>
+    {{#each arrayOfAssignments}}
+      <tr>
+        <td class="assignment1">{{id}}</td> 
+        <td class="assignment1">{{assignment}}</td> 
+        <td class="assignment1">{{score}}</td> 
+        <td class="assignment1">{{total}}</td>
+        <td class="complete">{{#if completed}}&check;{{/if}}</td>
+        <td>
+          <a class="edit" href="/edit-con/{{id}}">Edit</a> 
+          <a class="delete" href="/delete-con/{{id}}">Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+  <p class="score">Overall Average: {{myAverageScore}} </p>
+  <p class="link"><a href="http://localhost:9090/add-assignment">Add an Assignment</a></p>
+</body>
+</html>

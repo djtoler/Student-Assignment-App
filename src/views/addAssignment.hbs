@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+    body, html {
+        background-image: url(/pencil.jpg);
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+    }
+    .lines {
+        font-size: 60px;
+        color: white;
+        font-family: "Merriweather", sans-serif;
+        text-align: left;
+        background-color: black ;
+        opacity: 0.9;
+        border-radius: 20px;
+    }
+    .header {
+        font-size: 100px;
+        color: black;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: white ;
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+    .gray {
+      background-color: rgb(83, 77, 77);
+      font-size: 30px;
+      border: 1px solid black;
+      padding: 5px;
+    }
+    .rounder {
+        border-radius: 20px;
+        color: black;
+        font-family: "Merriweather", sans-serif;
+    }
+    .assignment1 {
+
+      color: black;
+      font-weight: 900;
+      font-family: "Merriweather", sans-serif;
+      opacity: 0.4;
+      border-spacing: 5px;
+      border: 1px solid white;
+      padding: 5px;
+      border-collapse: separate;
+      border-spacing: 25px;
+    }
+    .complete {
+      color: rgb(11, 180, 39);
+      text-align: center;
+      font-weight: 900;
+    }
+    .center {
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .add {
+      font-size: 30px;
+        color: black;
+        border-style: solid 1px white;
+        margin: 0 auto
+        font-family: "Merriweather", sans-serif;
+        align-items: center;
+        text-align: center;
+        background-color: black;
+        opacity: 0.9;
+        border-radius: 20px;
+        width: 25%;
+    }
+    .link {
+      font-size: 16px;
+      color: white;
+      font-family: "Merriweather", sans-serif;
+      text-align: center;
+      background-color: black;
+    }
+    .delete {
+      color: rgb(247, 48, 48);
+    }
+    .edit {
+      color: rgb(199, 202, 9)
+    }
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:5px;
+    border:2px solid #555;
+}
+input[type='checkbox']:checked {
+    background: green;
+    height: 50px;
+    width: 50px;
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=number]:focus {
+    border-color:#333;
+}
+input[type=number] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Merriweather", sans-serif;
+    background:black; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+</style>
+
+<body>
+  <div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3 header"><i class="fas fa-sign-in-alt"></i> Add Assignment </h1>
+      <form  method="POST">
+        
+        <div class="form-group lines">
+          <label for="assignment"> Email</label>
+          <input type="text" 
+          id="email" 
+          name="email" 
+          class="form-control" 
+          placeholder="Enter email for security" 
+          value"email" />
+        </div>
+
+        <div class="form-group lines">
+          <label for="assignment">Assignment Name</label>
+          <input type="text" 
+          id="assignment" 
+          name="assignment" 
+          class="form-control" 
+          placeholder="Enter Assignment" 
+          value"assignment" />
+        </div>
+
+        <div class="form-group lines">
+          <label for="assignment">Your Score</label>
+          <input type="text" 
+          id="score" 
+          name="score" 
+          class="form-control" 
+          placeholder="Enter Your Score" 
+          value"score" />
+        </div>
+
+        <div class="form-group lines">
+          <label for="assignment">Total Possible Score</label>
+          <input type="number"
+          value="10"   
+          name="total" 
+          class="form-control"  
+          />
+        </div>
+
+
+        <div class="lines">
+            <input type="checkbox" class="form-control" name="completed"  value="true">
+            <label for="assignment">Have You Completed This Assignment?</label>
+        </div>
+        <div class="add">
+            <input type="submit" value="Add Assignment"> 
+        </div>
+      </form>
+       <p><a class="link" href="http://localhost:9090/">Never Mind</a></p>
+
+
+        
+    </div>
+  </div>
+</div>
+</body>
+</html>

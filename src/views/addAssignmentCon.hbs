@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+    body, html {
+        background-image: url(/pencil.jpg);
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+    }
+    .lines {
+        font-size: 40px;
+        color: white;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: black ;
+        opacity: 0.9;
+        border-radius: 20px;
+        border: 1px solid white;
+        padding: 5px;
+        border-collapse: separate;
+        border-spacing: 25px;
+      }
+    .header {
+        font-size: 100px;
+        color: black;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: white ;
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+    
+    }
+    .link {
+      font-size: 16px;
+      color: white;
+      font-family: "Merriweather", sans-serif;
+      text-align: center;
+      background-color: black;
+    }
+    .subhead {
+        font-size: 80px;
+        color: white;
+        text-align: center;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: black ;
+        opacity: 0.9;
+        border-radius: 20px;
+    }
+
+</style>
+<html>
+<body>
+    <h1 class="text-center header">Assignment Added</h1>
+    <div class="p-3 mb-2 bg-danger text-white" >
+        <h2 class="subhead">This assignment was added</h2>
+        <p class="lines">ID: {{id}}</p>
+        <p class="lines">Name: {{assignment}} </p>
+        <p class="lines">Score: {{score}}</p>
+        <p class="lines">Total: {{total}}</p>
+        <p class="lines">Completed: {{completed}}</p>
+    </div>
+    <p class="link" ><a href="http://localhost:9090/">See All Assignments</a></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+    body, html {
+        background-image: url(/pencil.jpg);
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+    }
+    .header {
+        font-size: 120px;
+        color: white;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: black ;
+        opacity: 0.9;
+    }
+    .gray {
+      background-color: rgb(83, 77, 77);
+      font-size: 30px;
+      border: 1px solid black;
+      padding: 5px;
+    }
+    .rounder {
+        border-radius: 20px;
+        color: black;
+        font-family: "Merriweather", sans-serif;
+    }
+    .assignment1 {
+      color: black;
+      font-weight: 900;
+      text-align: center;
+      font-family: "Merriweather", sans-serif;
+      opacity: 0.9;
+      border-spacing: 5px;
+      border: 1px solid white;
+      padding: 5px;
+      border-collapse: separate;
+      border-spacing: 25px;
+    }
+
+    .link {
+      font-size: 30px;
+      color: white;
+      font-family: "Merriweather", sans-serif;
+      text-align: center;
+      background-color: black;
+    }
+    input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background: green;
+    border-radius:5px;
+    border:2px solid #555;
+}
+input[type='checkbox']:checked {
+    background: green;
+    height: 50px;
+    width: 50px;
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=number]:focus {
+    border-color:#333;
+}
+input[type=number] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Merriweather", sans-serif;
+    background:black; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+ 
+</style>
+<body>
+  <div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3 header"><i class="fas fa-sign-in-alt"></i> Edit Assignment </h1>
+      <form action="/edit/{{id}}" method="POST" id="editForm">
+
+        <div class="form-group assignment1 rounder gray">
+          <label for="assignment">Assignment Name</label>
+          <input type="text" 
+          id="assignment" 
+          name="assignment" 
+          class="form-control" 
+          {{!-- placeholder={{assignment}}  --}}
+          value={{assignment}} />
+        </div>
+
+        <div class="form-group assignment1 rounder gray">
+          <label for="assignment">Your Score</label>
+          <input type="text" 
+          id="score" 
+          name="score" 
+          class="form-control" 
+          {{!-- placeholder={{score}} --}}
+          value={{score}} />
+        </div>
+
+        <div class="form-group assignment1 rounder gray">
+          <label for="assignment">Total Possible Score</label>
+          <input type="text" 
+          id="total" 
+          name="total" 
+          class="form-control" 
+          {{!-- placeholder={{total}}  --}}
+          value={{total}} />
+        </div>
+
+
+        <div class=" assignment1 rounder gray">
+            <input type="checkbox" class="form-control" name="completed" placeholder={{completed}} value="true">
+            <label for="completed">Have You Completed This Assignment?</label>
+        </div>
+
+        <div class=" assignment1 rounder gray">
+            <input type="submit" name="save" value="Save" />
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

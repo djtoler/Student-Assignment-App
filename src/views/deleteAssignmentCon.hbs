@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+    body, html {
+        background-image: url(/pencil.jpg);
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+    }
+    .lines {
+        font-size: 25px;
+        color: red;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: white ;
+        opacity: 0.8;
+        border-radius: 20px;
+        border: 1px solid white;
+        padding: 5px;
+        border-collapse: separate;
+        border-spacing: 25px;
+      }
+    .header {
+        font-size: 100px;
+        color: black;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: white ;
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+    .deleteit {
+        font-size: 80px;
+        color: red;
+        text-align: center;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: black ;
+        opacity: 0.9;
+        border-radius: 20px;
+    }
+    }
+    .link {
+      font-size: 16px;
+      color: white;
+      font-family: "Merriweather", sans-serif;
+      text-align: center;
+      background-color: black;
+    }
+        .subhead1 {
+        font-size: 80px;
+        color: red;
+        text-align: center;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: white ;
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+        .subhead {
+        font-size: 40px;
+        color: red;
+        text-align: center;
+        font-family: "Merriweather", sans-serif;
+        text-align: center;
+        background-color: black ;
+        opacity: 0.9;
+        border-radius: 20px;
+    }
+    .gray {
+      background-color: rgb(83, 77, 77);
+      font-size: 30px;
+      border: 1px solid black;
+      padding: 5px;
+    }
+    .rounder {
+        border-radius: 20px;
+        color: red;
+        font-family: "Merriweather", sans-serif;
+    }
+    .bg {
+        background-color: red;
+        color: black;
+        border-radius: 20px;
+        font-family: "Merriweather", sans-serif;
+    }
+    span {
+  content: "\26A0";
+  color: yellow;
+}
+
+</style>
+<html>
+<body>
+    <h1 class="text-center header">Delete Assignment?</h1>
+    <div class="p-3 mb-2 bg-danger text-white subhead" >
+        <div>
+             <h2 class="subhead bg"><span>&#9888;</span> Are you sure you want to delete this assgigment? <span>&#9888;</span></h2>
+        </div>
+       
+        <p class=" subhead1 lines rounder">Assignment: {{assignment}} </p>
+        <p class="deleteit"><a href="/delete/{{id}}">Yes! Delete It!</a></p>
+    </div>
+    <p class="link"><a href="http://localhost:9090/">Nevermind</a></p>
+</div>
+</body>
+</html>
+
+
